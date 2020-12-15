@@ -202,7 +202,7 @@ vue-project/src
 import Vue from 'vue'
 
 // require.context返回的是webpack式的上下文，它有id,keys,resolve等方法
-// 											目录路径   是否查找子目录   正则匹配
+// require.context('目录路径', 是否查找子目录true/false, 正则匹配RegExp)
 const componentContext = require.context('@/components', true, /\.vue$/)
 
 // keys方法执行后返回的是符合“'@/components', true, /\.vue$/”条件的文件的路径组成的数组
