@@ -1,0 +1,16 @@
+// sass 的mixin方法，配合媒体查询来适配不同屏幕大小时的样式渲染
+@mixin resH-to($media) {
+    @if $media == small-screen {
+        @media screen and (max-height: $height-small) {
+            @content;
+        }
+    } @else if $media == medium-screen {
+        @media screen and (min-height: $height-small + 1) and (max-height: $height-medium) {
+            @content;
+        }
+    } @else if $media == large-screen {
+        @media screen and (min-height: $height-medium + 1) {
+            @content;
+        }
+    }
+}

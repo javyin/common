@@ -1,0 +1,26 @@
+@import '@/assets/styles/_mixin.scss';
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: $footer-height;
+    z-index: 100;
+    background: $border-color;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    // 使用mixin中定义好的方法来适配不同屏幕大小的样式
+    @include resH-to(medium-screen) {
+        padding-bottom: 20px;
+    }
+    a {
+        color: $font-main-color;
+        font-size: $m;
+        text-decoration: none;
+    }
+    .active {
+        color: $primary-color;
+    }
+}
